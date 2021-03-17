@@ -1,0 +1,69 @@
+
+select * from WatchList
+
+-- select count (*) from watchlist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--delete  from WatchList
+
+
+
+USE [2019]
+GO
+
+/****** Object:  Table [dbo].[WatchList]    Script Date: 6/12/2019 9:50:47 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[WatchList](
+	[Description] [varchar](max) NULL,
+	[Symbol] [varchar](max) NULL,
+	[%Change] [varchar](max) NULL,
+	[EPS] [varchar](max) NULL,
+	[PE] [varchar](max) NULL,
+	[Volume] [varchar](max) NULL,
+	[Market Cap] [varchar](max) NULL,
+	[Shares] [varchar](max) NULL,
+	[Net Chng] [varchar](max) NULL,
+	[52Low] [varchar](max) NULL,
+	[Low] [varchar](max) NULL,
+	[Last] [varchar](max) NULL,
+	[High] [varchar](max) NULL,
+	[Close] [varchar](max) NULL,
+	[Open] [varchar](max) NULL,
+	[52High] [varchar](max) NULL,
+	[Bid] [varchar](max) NULL,
+	[Ask] [varchar](max) NULL,
+	[RSI] [varchar](max) NULL,
+	[Div. Payout Per Share (% of EPS) - Current] [varchar](max) NULL,
+	[Open.Int] [varchar](max) NULL,
+	[EX] [varchar](max) NULL,
+	[Date] [date] NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+

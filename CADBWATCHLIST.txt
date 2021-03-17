@@ -1,0 +1,74 @@
+USE [RamTest]
+GO
+
+/****** Object:  Table [dbo].[CADbWatchList]    Script Date: 2021/01/11 6:39:41 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[CADbWatchList](
+	[Ticker] [varchar](max) NULL,
+	[C] [varchar](max) NULL,
+	[Name] [varchar](max) NULL,
+	[Symbol] [varchar](max) NULL,
+	[EX] [varchar](max) NULL,
+	[Date] [varchar](max) NULL,
+	[DayOfWeek] [varchar](max) NULL,
+	[EPS] [varchar](max) NULL,
+	[PE] [varchar](max) NULL,
+	[Yield] [varchar](max) NULL,
+	[% Chg] [varchar](max) NULL,
+	[Change] [varchar](max) NULL,
+	[Price] [varchar](max) NULL,
+	[Ask] [varchar](max) NULL,
+	[Bid] [varchar](max) NULL,
+	[Trd Sz] [varchar](max) NULL,
+	[Ask Sz] [varchar](max) NULL,
+	[Bid Sz] [varchar](max) NULL,
+	[Close] [varchar](max) NULL,
+	[52 Week Range] [varchar](max) NULL,
+	[52 High] [varchar](max) NULL,
+	[High] [varchar](max) NULL,
+	[Low] [varchar](max) NULL,
+	[52 Low] [varchar](max) NULL,
+	[Open] [varchar](max) NULL,
+	[Call/Put] [varchar](max) NULL,
+	[Imp Vol] [varchar](max) NULL,
+	[Mark] [varchar](max) NULL,
+	[Exch] [varchar](max) NULL,
+	[Mkt Val] [varchar](max) NULL,
+	[Market Cap] [varchar](max) NULL,
+	[Shr Os] [varchar](max) NULL,
+	[Volume] [varchar](max) NULL,
+	[AVG Volume 6 Month] [varchar](max) NULL,
+	[Blk Vol] [varchar](max) NULL,
+	[Opn Int] [varchar](max) NULL,
+	[Day % P/L] [varchar](max) NULL,
+	[Day P/L] [varchar](max) NULL,
+	[% P/L] [varchar](max) NULL,
+	[P/L] [varchar](max) NULL,
+	[Book Cost] [varchar](max) NULL,
+	[Avg Cost] [varchar](max) NULL,
+	[Entry Date] [varchar](max) NULL,
+	[Quantity] [varchar](max) NULL,
+	[Trade] [varchar](max) NULL,
+	[Trend] [varchar](max) NULL,
+	[Opn Int Chg] [varchar](max) NULL,
+	[Curr] [varchar](max) NULL,
+	[Q] [varchar](max) NULL,
+	[Div] [varchar](max) NULL,
+	[Div Pay Dt] [varchar](max) NULL,
+	[Ex-Div] [varchar](max) NULL,
+	[Exp Dt] [varchar](max) NULL,
+	[Num Trd] [varchar](max) NULL,
+	[Prc Tck] [varchar](max) NULL,
+	[Quote Trend] [varchar](max) NULL,
+	[Range] [varchar](max) NULL,
+	[Rel Range] [varchar](max) NULL,
+	[Strike] [varchar](max) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+

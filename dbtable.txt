@@ -1,0 +1,38 @@
+USE [RAMTEST]
+GO
+
+/****** Object:  Table [dbo].[watchlist]    Script Date: 2019/10/06 3:17:39 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[watchlist](
+	[Description] [varchar](max) NULL,
+	[Symbol] [varchar](50) NULL,
+	[%Change] [varchar](50) NULL,
+	[EPS] [varchar](50) NULL,
+	[PE] [varchar](50) NULL,
+	[Volume] [varchar](50) NULL,
+	[Market Cap] [varchar](50) NULL,
+	[Shares] [varchar](50) NULL,
+	[Net Chng] [varchar](50) NULL,
+	[52Low] [varchar](50) NULL,
+	[Low] [varchar](50) NULL,
+	[Last] [varchar](50) NULL,
+	[Close] [varchar](50) NULL,
+	[Open] [varchar](50) NULL,
+	[High] [varchar](50) NULL,
+	[52High] [varchar](50) NULL,
+	[Bid] [varchar](50) NULL,
+	[Ask] [varchar](50) NULL,
+	[RSI] [varchar](50) NULL,
+	[Div. Payout Per Share (% of EPS) - Current] [varchar](50) NULL,
+	[Open.Int] [varchar](50) NULL,
+	[EX] [varchar](50) NULL,
+	[Date] [varchar](50) NULL,
+	[MarketCapNum] [varchar](max) NULL,
+	[DayOfWeek] [varchar](50) NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO

@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7ED3A7E2-E9AA-4960-B0EF-3C8C67ACB248}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UploadData</RootNamespace>
+    <AssemblyName>UploadData</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BreakEven.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BreakEven.Designer.cs">
+      <DependentUpon>BreakEven.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectETFs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectETFs.Designer.cs">
+      <DependentUpon>SelectETFs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EXSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EXSelect.Designer.cs">
+      <DependentUpon>EXSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Links.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Links.Designer.cs">
+      <DependentUpon>Links.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStockData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStockData.Designer.cs">
+      <DependentUpon>ManageStockData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BreakEven.resx">
+      <DependentUpon>BreakEven.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectETFs.resx">
+      <DependentUpon>SelectETFs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EXSelect.resx">
+      <DependentUpon>EXSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Links.resx">
+      <DependentUpon>Links.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStockData.resx">
+      <DependentUpon>ManageStockData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{28b819ab-9f14-44e3-970c-6eceb7997d25}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{f1f12066-01db-4ce6-93f0-b47f7a5b7662}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{2d27f6d6-cf8f-4122-aac1-e1582fd810a2}</Project>
+      <Name>Logging</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
