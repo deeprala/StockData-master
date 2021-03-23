@@ -159,7 +159,7 @@ namespace BusinessLayer.CanadaWeb
                         // data loop
                         while (sqlDataReader.Read())
                         {
-                            if (textFileName.Contains("US"))
+                            if (textFileName.Contains("US") || textFileName.Contains("NYSE") || textFileName.Contains("NASDAQ"))
                             {
                                 var formatValue = sqlDataReader.GetValue(0).ToString().Contains(".") ? sqlDataReader.GetValue(0).ToString().Replace(".", "/") : sqlDataReader.GetValue(0).ToString();
                                 txtwriter.Write(formatValue);
