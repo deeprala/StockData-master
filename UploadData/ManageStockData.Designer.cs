@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("USA");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("USA");
             this.btnUploadData = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.success = new System.Windows.Forms.Label();
@@ -186,7 +186,7 @@
             this.labelEX = new System.Windows.Forms.Label();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnCACsv = new System.Windows.Forms.Button();
             this.splitter1 = new System.Windows.Forms.Splitter();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox24 = new System.Windows.Forms.TextBox();
@@ -398,8 +398,9 @@
             // 
             // listView1
             // 
+            this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem6});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(113, 212);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(181, 31);
@@ -679,7 +680,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(929, 59);
+            this.button1.Location = new System.Drawing.Point(941, 59);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(84, 23);
             this.button1.TabIndex = 44;
@@ -1867,14 +1868,15 @@
             this.button10.Text = "Select";
             this.button10.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnCACsv
             // 
-            this.button11.Location = new System.Drawing.Point(843, 60);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(60, 23);
-            this.button11.TabIndex = 179;
-            this.button11.Text = "Select";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnCACsv.Location = new System.Drawing.Point(843, 60);
+            this.btnCACsv.Name = "btnCACsv";
+            this.btnCACsv.Size = new System.Drawing.Size(92, 23);
+            this.btnCACsv.TabIndex = 179;
+            this.btnCACsv.Text = "US-CA-Csv";
+            this.btnCACsv.UseVisualStyleBackColor = true;
+            this.btnCACsv.Click += new System.EventHandler(this.btnCACsv_Click);
             // 
             // splitter1
             // 
@@ -2736,7 +2738,7 @@
             this.Controls.Add(this.label70);
             this.Controls.Add(this.label71);
             this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.btnCACsv);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.label66);
             this.Controls.Add(this.radioButton5);
@@ -3062,7 +3064,7 @@
         private System.Windows.Forms.Label labelEX;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnCACsv;
         private System.Windows.Forms.Splitter splitter1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox24;
