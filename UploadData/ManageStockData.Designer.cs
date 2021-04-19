@@ -1876,7 +1876,7 @@
             this.btnCACsv.TabIndex = 179;
             this.btnCACsv.Text = "US-CA-Csv";
             this.btnCACsv.UseVisualStyleBackColor = true;
-            this.btnCACsv.Click += new System.EventHandler(this.btnCACsv_Click);
+            this.btnCACsv.Click += new System.EventHandler(this.btnUSACACsv_Click);
             // 
             // splitter1
             // 

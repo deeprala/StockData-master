@@ -931,18 +931,18 @@ namespace UploadData
 
         }
 
-        private void btnCACsv_Click(object sender, EventArgs e)
+        private void btnUSACACsv_Click(object sender, EventArgs e)
         {
             var outputdataToDate = dateTimeOutputData_From.Text;
             var outputdataFromDate = dateTimeOutputData_To.Text;
             lblFileOutput.Text = "";
             dataConnectionString = "Data Source=" + strDataserver + ";Initial Catalog=" + strDatabase + "; Integrated Security=SSPI;";
-            var outputPath = textOutputPath.Text.ToLower() + @"\AllDataPrint_" + DateTime.Today.Date.ToString("yyyy-MM-dd") + ".csv";
-            var query = @"SELECT [Description],[EX],[Date],[DayOfWeek],[MarketCapNum],[Volume],[Symbol],[%Change],[Last],[EPS],[PE],[Market Cap]
-                        ,[Shares],[Net Chng],[52Low],[Low],[Last],[Close],[Open],[High],[52High],[Bid],[Ask] ,[RSI],[Div. Payout Per Share (% of EPS) - Current],[Open.Int]
+            var outputPath = textOutputPath.Text.ToLower() + @"\USTemplate_" + DateTime.Today.Date.ToString("yyyy-MM-dd") + ".csv";
+            var query = @"SELECT DISTINCT (Symbol), country = 'US'
                         FROM [dbo].[WatchList] where [Date] between '" + outputdataToDate + "' and  '" + outputdataFromDate + "'";
 
-            DatabaseLayer.SaveResultToFile(dataConnectionString, outputPath, query);
+            //DatabaseLayer.SaveResultToFile(dataConnectionString, outputPath, query);
+            ExportDataFromDbtoFile.CreateCATemplateFromDb(dataConnectionString, outputPath , query);
             lblFileOutput.Text += @": " + outputPath;
         }
     }
